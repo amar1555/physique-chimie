@@ -1,0 +1,49 @@
+/* ========== MOBILE FIRST APPROACH ========== */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - var(--header-height));
+        padding: 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--dark-color);
+        cursor: pointer;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
